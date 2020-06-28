@@ -5,12 +5,12 @@ This is a brief summary (not exhaustive) of the main features from each release
 ## 1.0.0
 
 ### Execution
-    # Installation of all necessary lib
-    pip3 install -r requirements.txt
     
-    # In two different terminals of course
-    python3 -m backend
-    python3 -m client
+    ./start.sh MODEL
+      
+    # In two different terminals or machine of course
+    python3 -m backend HOST_BACKEND
+    python3 -m client HOST_BACKEND
 
 
 
