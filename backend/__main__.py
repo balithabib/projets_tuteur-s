@@ -13,6 +13,8 @@ client_detector = ObjectDetector()
 # Generate a new secret key :
 SECRET_KEY = "".join([random.choice(string.printable) for _ in range(24)])
 app.config.update(SECRET_KEY=SECRET_KEY, FB_APP_ID=1200420960103822)
+HOST = '192.168.1.38'
+PORT = '5555'
 
 
 @app.route('/web_cam', methods=['POST'])
@@ -27,4 +29,4 @@ def post():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=HOST, port=PORT)
