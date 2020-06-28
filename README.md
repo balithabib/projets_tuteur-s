@@ -25,8 +25,8 @@ This is a brief summary (not exhaustive) of the main features from each release
     # Note that we can launch the services directly with the two lines
     HOST=$(hostname -I | cut -d ' ' -f1)
     PORT=6666
-    python3 -m backend --host ${HOST} ${PORT}
-    python3 -m client --host ${HOST} ${PORT}
+    python3 -m backend --host ${HOST} --port ${PORT}
+    python3 -m client --host ${HOST} --port ${PORT}
 
 
 

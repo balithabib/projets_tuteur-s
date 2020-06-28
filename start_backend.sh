@@ -67,4 +67,4 @@ choose_a_model ${MODEL}
 HOST=$(hostname -I | cut -d ' ' -f1)
 print "Launch the web application ${HOST}"
 cd ${PATH_BASE}
-python3 -m backend --host ${HOST} --port 6666
+python3 -m backend --host ${HOST} --port "6666"
