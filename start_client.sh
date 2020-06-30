@@ -1,17 +1,11 @@
 #!/usr/bin/env bash
 # Automation script
 HOST=$1
-PORT=$2
+PORT="6666"
 
 if [ -z ${HOST} ]; then
   echo "No argument supplied"
   echo $"Usage: first argument must be the host of the backend (local or public IPv4)"
-  exit 1
-fi
-
-if [ -z ${PORT} ]; then
-  echo "No argument supplied"
-  echo $"Usage: first argument must be the port"
   exit 1
 fi
 

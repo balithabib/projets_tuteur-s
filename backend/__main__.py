@@ -27,11 +27,9 @@ PORT = args['port']
 def post():
     decoded_image = decode_image(request.data)
 
-    image_with_detection = client_detector.detect(decoded_image)
-
+    info, image_with_detection = client_detector.detect(decoded_image)
     encoded_image = encode_image(image_with_detection)
-
-    return jsonify({"data": encoded_image})
+    return jsonify(data=encoded_image, info=info)
 
 
 if __name__ == '__main__':

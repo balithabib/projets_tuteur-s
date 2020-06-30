@@ -1,2 +1,6 @@
 .idea/
 __pycache__/
+backend/*.pyc
+client/*.pyc
+client/__pycache__/
+backend/__pycache__/

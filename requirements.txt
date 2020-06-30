@@ -1,6 +1,12 @@
+requests
+aiohttp
 flask
 opencv-python
 matplotlib
-numpy>=1.17.4
+numpy
 tensorflow
-aiohttp
+six
+python-dateutil
+image
+attrs
+idna

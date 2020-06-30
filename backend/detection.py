@@ -77,4 +77,11 @@ class ObjectDetector(object):
             use_normalized_coordinates=True,
             line_thickness=8)
 
-        return image_np
+        return self.get_info(self.category_index, scores, classes), image_np
+
+    def get_info(self, category_index, scores, classes):
+        dict_info = {key: {'name': value['name'], 'score': str(scores[0][key]), 'class': str(classes[0][key])}
+                     for key, value in category_index.items()}
+        sorted_info = sorted(dict_info.items(), key=lambda item: item[1]['score'])
+        sorted_info.reverse()
+        return {item[0]: item[1] for item in sorted_info[0:5]}
